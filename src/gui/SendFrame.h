@@ -1,7 +1,6 @@
 // Copyright (c) 2011-2016 The Cryptonote developers
 // Copyright (c) 2015-2016 XDN developers
 // Copyright (c) 2016 The Karbowanec developers
-// Copyright (c) 2018 The Qwertycoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -49,6 +48,7 @@ private:
   void insertPaymentID(QString _paymentid);
   static bool isValidPaymentId(const QByteArray& _paymentIdString);
   void onAddressFound(const QString& _address);
+  double getMinimalFee();
   void reset();
 
   Q_SLOT void addRecipientClicked();
