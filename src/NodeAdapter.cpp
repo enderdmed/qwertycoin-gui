@@ -271,11 +271,6 @@ uint8_t NodeAdapter::getCurrentBlockMajorVersion() {
   return getLastLocalBlockHeaderInfo().majorVersion;
 }
 
-quint64 NodeAdapter::getMinimalFee() const {
-  Q_CHECK_PTR(m_node);
-  return m_node->getMinimalFee();
-}
-
 void NodeAdapter::peerCountUpdated(Node& _node, size_t _count) {
   Q_UNUSED(_node);
   Q_EMIT peerCountUpdatedSignal(_count);
